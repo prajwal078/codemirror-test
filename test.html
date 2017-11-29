@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CodeMirror Editor Test</title>
+	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="codemirror/addon/hint/show-hint.css">
+
+
+	<script src="codemirror/lib/codemirror.js"></script>
+	<script src="codemirror/mode/acorn/acorn.js"></script>
+
+	<script src="codemirror/addon/hint/show-hint.js"></script>
+	<script src="codemirror/addon/hint/acorn-hint.js"></script>
+</head>
+<body>
+<textarea>
+var textarea = document.getElementsByTagName('textarea')[0];
+
+var defaults = CodeMirror.defaults;
+console.log(textarea, defaults);
+
+var options = Object.assign({}, defaults);
+
+var myCodeMirror = CodeMirror.fromTextArea(textarea, options);
+</textarea>
+</body>
+
+<script src="test.js"></script>
+</html>
